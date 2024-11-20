@@ -1,0 +1,17 @@
+name: Run pwd and wait
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-pwd-and-wait:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print working directory
+        run: pwd
